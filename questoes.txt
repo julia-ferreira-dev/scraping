@@ -1,0 +1,651 @@
+No âmbito de estratégias e técnicas de testes de software, assinale a afirmativa correta.
+Qual processo PMBOK – 4ª Edição tem como uma de suas saídas uma matriz de rastreabilidade?
+Um servidor Linux de produção apresenta, esporadica- mente, um erro conhecido, no qual um determinado processo (cgi.rb) ocupa 99% de CPU indeterminadamente. Você, como operador, é instruído a matar esse processo para que o desempenho do servidor volte à situação normal. Que seqüência de operações deve ser feita?
+No contexto de banco de dados relacionais, dada a relação investimento
+
+
+
+E a relação Y resultante da operação X
+
+
+
+A operação X é
+O modelo relacional a seguir representa um banco de dados simplificado de uma empresa de comércio. As chaves estão sublinhadas.
+
+CLIENTE(NomeC, EnderecoC)
+PRODUTO(NomeP)
+FORNECEDOR(NomeF)
+PRODUZ(NomeF,NomeP,Preco)
+PEDIDO(NomeC,NomeF,NomeP,Quantidade)
+
+Se o dono da empresa deseja saber quais clientes nunca pediram um produto do fornecedor cujo nome é "Barateira", que consulta SQL deve fazer?
+Entre os três tipos de MBeans monitores da especificação JMX estão os do tipo GaugeMonitor, que observam atributos cujo valor varia arbitrariamente e são
+Java Message Service (JMS) é uma tecnologia voltada para o envio e processamento de mensagens na qual o
+As linguagens de programação C, Haskell e Ruby são, respectivamente, exemplos dos paradigmas
+Considere um computador que possua uma CPU qualquer, cujo tamanho do contador de instruções (CI) seja associado ao tamanho de um operando e que tenha o seguinte formato para uma instrução:
+
+
+
+Qual o tamanho em bits do Registrador de Instruções (RI), do Registrador de Dados da Memória (RDM), do Registrador de Endereços de Memória (REM) e da palavra de memória?
+Analisando-se esse modelo, verifica-se que
+O modelo de programação Java Enterprise Edition é baseado em containers, que fornecem todos os serviços necessários para a aplicação corporativa.
+Em consequência,
+Ao instalar uma aplicação Java EE, a ferramenta de instalação deve ler o descritor de instalação de aplicação do arquivo .ear da aplicação, que é encontrado em
+Os números X e Y são representados em complemento 2 com 8 bits por 00000101 e 10001110, respectivamente.
+
+Qual é o resultado, em base decimal, de X-Y?
+As questões a seguir devem ser levadas em consideração no design da maioria das aplicações desenvolvidas para a arquitetura J2EE.
+
+• A ocorrência de código scriptlet no interior das visões deve ser minimizada.
+• A lógica de negócios deve ser encapsulada em componentes que não pertençam à visão.
+• O controle de fluxo é relativamente simples e tem como base valores encapsulados na requisição.
+• A lógica de gerenciamento da visão é limitada em termos de complexidade.
+
+Que padrão de projeto da camada de apresentação busca atacar todas as questões apresentadas acima?
+Sejam as seguintes classes Java, que ocupam arquivos distintos:
+
+public class ExcecaoA extends Exception {
+}
+
+-------------------- arquivo ExcecaoAB.java --------------------
+public class ExcecaoAB extends ExcecaoA {
+}
+
+-------------------- arquivo ClasseA.java --------------------
+public abstract class ClasseA {
+          private int x=1;
+          int y=2;
+          public ClasseA(int p)
+          {
+                   x=p;
+          }
+          public int mt_a(int a,int b)
+          {
+                  try {
+                              if(a%2==1)
+                                        throw new ExcecaoAB();
+                              return a+b;
+                  }
+                  catch(ExcecaoAB e) {
+                              return a*x+b*y;
+                  }
+                  catch(Exception e) {
+                              return a*x-b*y;
+                  }
+          }
+}
+
+-------------------- arquivo ClasseB.java --------------------
+public class ClasseB extends ClasseA {
+           int x=2;
+           int y=4;
+           public ClasseB()
+          {
+                    super(0);
+          }
+          public int mt_a(int a,int b)
+          {
+                    try {
+                              if(b%2==1)
+                                        throw new ExcecaoA();
+                              return a-b;
+                    }
+                    catch(ExcecaoAB e) {
+                              return 4*y;
+                    }
+                    catch(Exception e) {
+                              return 5*x;
+                    }
+                    finally {
+                                x++;
+                                 y++;
+                    }
+           }
+}
+
+-------------------- arquivo Q07.java --------------------
+public class Q07 {
+           public static void main(String[] args) {
+                        ClasseA c=new ClasseB();
+                        System.out.println(c.mt_a(2,3));
+            }
+}
+
+
+O que será exibido no console quando o método main() for executado?
+O padrão de projeto Proxy é uma solução adequada para alguns problemas de design, EXCETO:
+Na linguagem Java, a palavra-chave final pode ser usada na declaração de classes, de métodos e de variáveis.
+
+Quando essa palavra-chave é usada na declaração de uma classe, ela indica que
+O método concat(s1,s2) recebe duas pilhas como parâmetros e retorna a concatenação de s1 com s2. Por exemplo, suponha que as pilhas abaixo sejam passadas para concat():
+
+
+
+O método concat() irá produzir uma pilha na qual o elemento que estará no seu topo será o topo da pilha s1. Além disso, o elemento no topo de s2 ficará imediatamente abaixo da base de s1. A Figura a seguir exibe a pilha produzida pelo método concat() a partir das pilhas s1 e s2:
+
+
+
+Qual implementação do método concat() produz o resultado descrito acima?
+Seja a seguinte interface Java:
+
+public interface IF005 {
+          Object op1(Object o);
+          String cat(String s1,String s2);
+}
+
+Qual classe implementa IF005 corretamente?
+Qual transação segue o protocolo de bloqueio em duas fases com permissão para conversão de bloqueio?
+Sejam as seguintes afirmativas sobre Data Warehouses:
+
+I - Uma tabela de dimensão contém metadados relativos a uma ou mais tabelas de fatos.
+
+II - O esquema floco de neve consiste em uma hierarquia de tabelas de fatos que compartilham uma tabela dimensão.
+
+III - Pivoteamento é uma técnica usada para sumarizar dados ao longo de uma dimensão.
+
+IV - Drill-down é uma operação usada para prover uma visão desagregada dos dados.
+
+Estão corretas APENAS as afirmativas
+A relação R a seguir foi obtida pela aplicação de uma sequência de operações da Álgebra Relacional sobre as relações T e V.
+
+
+
+Que sequência é essa?
+Seja a seguinte sequência de operações da Álgebra Relacional:
+
+πT1,T3 (σV1>5(T⋈T1=V3 V)) - πT1,T3 ( σT2<8 (T))
+
+Qual é o resultado dessa sequência de operações?
+No âmbito da análise estruturada de sistemas, o gráfico de estrutura representa o modelo lógico de uma hierarquia modular, onde é possível mostrar a(o)
+Sendo atualmente conhecida por just-in-time, a produção enxuta contém princípios que compõem a base dos processos ágeis de desenvolvimento de software, como o Extremme Programming (XP).
+
+Um dos princípios básicos do XP, a eliminação de desperdícios, busca
+Considere, em um primeiro sentido, que “pedreiros trabalham em construção civil” e, em sentido contrário, que “a construção civil emprega pedreiros”.
+
+Na análise orientada a objetos com notação UML(Unified Modeling Language), o exemplo mencionado, de acordo com o modelo objeto, está relacionado a uma
+Um sistema distribuído é um conjunto de sistemas autônomos, interconectados por uma rede de comunicação, que se diferencia dos demais sistemas fracamente acoplados pela existência de um relacionamento mais forte entre os seus componentes.
+
+Tais componentes
+Uma empresa precisa de uma aplicação para processar ordens de compra na forma de mensagens de texto. As mensagens chegam criptografadas, além de conterem informações que permitem garantir que elas foram enviadas por clientes confiáveis.
+
+A aplicação deve ainda levar em conta os seguintes requisitos arquiteturais:
+
+• Melhorias futuras no sistema deverão ser possíveis através da troca ou recombinação dos componentes responsáveis pelas diversas etapas do processamento.
+• Cada componente deve ser o mais especializado possível, para que possa ser empregado em diferentes contextos.
+• Componentes responsáveis por etapas de processamento não adjacentes não devem trocar informações.
+• As fontes de dados podem variar, podendo ser uma conexão socket, uma conexão http ou um arquivo.
+• Os resultados do processamento podem ser apresentados ou armazenados de diversas formas.
+
+Qual padrão arquitetural é o indicado para essa aplicação, por atender a todos os requisitos arquiteturais listados acima?
+Cada tipo de enterprise bean passa por diferentes fases durante seu ciclo de vida. Um desses tipos possui um estado denominado Passivo. Quando um bean entra nesse estado, o container EJB o desloca da memória principal para a memória secundária.
+
+Qual tipo de bean se comporta dessa maneira?
+Qual elemento deve ser a raiz (root element) de um documento XML para que este seja identificado como uma mensagem SOAP?
+Sejam as seguintes classes Java, que ocupam arquivos distintos:
+
+-------------------- arquivo CA01.java --------------------
+package M1;
+public class CA01 {
+      protected void mt01(int a) { }
+}
+
+-------------------- arquivo CA02.java --------------------
+package M2;
+import M1.*;
+public class CA02 extends CA01{
+    public void mt01(int a,int b){ }
+    public void mt01(int a){ }
+}
+
+
+-------------------- arquivo CA03.java --------------------
+package M1.M2;
+public class CA03 {
+    public double mt03(double b) { return 0.0;}
+}
+
+
+-------------------- arquivo CA04.java --------------------
+public class CA04 {
+    protected String mt04(String a,String b) { return a+ʹʹ-ʹʹ+b;}
+}
+A classe Q03 contém o método main(). Ela é mostrada a seguir:
+import M2.*;
+import M1.*;
+    public class Q03 {
+        public static void main(String[] args) {
+              CA02 p=new CA02();
+              CA01 q=new CA01();
+              M1.M2.CA03 r=new CA03();
+              String n=(new CA04()).mt04(ʹʹBrasilʹʹ,ʹʹBrasíliaʹʹ);
+              p.mt01(2,2);
+              p.mt01(7);
+        }
+}
+
+Qual comando de main() produz um erro de compilação?
+Qual método pertencente à biblioteca nativa de Java NÃO é capaz de bloquear a execução de uma thread?
+Uma árvore rubro-negra possui 18 valores inteiros distintos armazenados em seus 18 nós.
+
+Uma função recursiva, cujo cabeçalho é boolean busca (int val), foi escrita com o objetivo de visitar os nós desse tipo de árvore à procura de um determinado valor (val). O algoritmo utilizado tira partido das características de uma árvore rubro-negra, com o objetivo de ser o mais eficiente possível.
+
+Qual é o número máximo de chamadas à função busca( ) que será necessário para informar se um determinado valor está, ou não, armazenado na árvore?
+Seja o seguinte diagrama E-R:
+
+
+
+Analisando esse diagrama conclui-se que
+O esquema de um banco de dados relacional é descrito segundo a seguinte notação:
+
+• uma tabela possui um nome e um conjunto de colunas, separadas por vírgulas. Por exemplo, TX(col1,col2,col3,col4) representa uma tabela cujo nome é TX.
+• os tipos de dados das colunas são irrelevantes para a questão, logo não são apresentados.
+• as colunas que compõem a chave primária de uma tabela estão sublinhadas.
+• as dependências funcionais entre colunas de uma tabela são exibidas logo abaixo da sua definição.
+
+Sabendo-se que todas as relações atendem à primeira forma normal, TODAS as relações atendem também à terceira forma normal em
+Qual consulta permite exibir a placa e o modelo dos veículos que NÃO foram alugados no mês de junho de 2012?
+Qual comando SQL será executado com sucesso, independente do estado das tabelas que compõem a base de dados da locadora de veículos?
+Em projetos de desenvolvimento de sistemas de software como, por exemplo, sistemas multimídia, um requisito de tempo não atendido pode significar o fracasso das funções desses sistemas.
+
+Para se evitar esse fato, deve ser realizado, por meio do uso de instrumentos de software e hardware, um tipo específico de teste no qual seja(m)
+Uma equipe de desenvolvimento de software dispõe de computadores de última geração para realizar um projeto. Ter esse hardware, porém, não significa garantir a qualidade do produto final do projeto.
+
+A qualidade do software a ser desenvolvido pode ser atingida com o uso, por exemplo, de
+Um desenvolvedor de software atua com um usuário ouvindo suas idéias e pedidos e criando, imediatamente, um esboço do produto desejado por esse usuário. O usuário, então, utiliza esse esboço e fornece novas informações ao desenvolvedor para que este possa atualizar, adaptar e implementar, nesse mesmo produto e em tempo de projeto e desenvolvimento, os dados obtidos.
+
+A situação descrita constitui uma prototipação, modelo de ciclo de vida do software que deve
+De um modo geral, o processo de desenvolvimento de um software pode ser organizado partindo de três fases importantes, que são as de definição, de desenvolvimento e de manutenção.
+
+Na fase de manutenção, dentre outras atividades, são
+Muitas vezes é necessário converter a representação de um número inteiro com n bits para sua representação com m bits, onde m > n.
+
+Se a representação em complemento de dois com 8 bits do número inteiro positivo +19 é 00010011, a representação em complemento de dois com 16 bits do número inteiro negativo -19 é
+Em uma reunião técnica sobre o desenvolvimento de um sistema de informação WEB, em JAVA, o gerente de projeto aponta, corretamente, que o mecanismo reponsável por direitos e permissões dos usuários é o de
+Um programador, ao analisar determinado sistema WB, observa o arquivo a seguir.
+
+
+
+Qual o formato desse arquivo?
+Um gerente de projeto está preocupado com o desempenho de um sistema de informação que está prestes a ser implantado, uma vez que existe uma expectativa de acesso de muitos usuários.
+
+Que tipo de teste, mais especificamente, pode ser realizado para avaliar o desempenho desse sistema, dadas condições operacionais variáveis, tais como número de usuários e transações?
+Os usuários de um sistema WEB, desenvolvido em JAVA, reclamam de erros nos dados consultados. A equipe técnica, ao analisar a situação, concluiu que determinado método M está sendo invocado, simultaneamente, por diferentes threads.
+
+Considerando-se que não há manipulação de locks no restante do sistema, o que pode ser feito para que M seja executado, em dado momento, somente por uma thread?
+Determinado grupo de pesquisa de uma universidade, no processo de criação de uma linguagem de programação, estabelece que erros de tipo sempre devem ser detectados.
+
+Essa é uma característica conhecida como
+Em uma reunião técnica sobre a estrutura de dados que será utilizada em um sistema de computação científica, apontou-se, corretamente, que a árvore B+
+Na base de dados de um sistema de controle de clientes, foi criada a tabela CLIENTES, que conta com as colunas: ID, NOME, ENDERECO, CIDADE e UF. Os valores da coluna ID não se repetem.
+
+Sobre essa tabela CLIENTES foi criada a visão VCLIENTES_RJ, que busca apresentar os clientes do estado do Rio de Janeiro. O comando de criação da visão VCLIENTES_RJ é:
+
+CREATE VIEW VCLIENTES_RJ
+AS SELECT ID, NOME, ENDERECO, CIDADE, UF
+FROM CLIENTES WHERE UF = ‘RJ’
+
+Um usuário submeteu o seguinte comando para execução pelo gerenciador do banco de dados:
+
+UPDATE VCLIENTES_RJ SET NOME =’JOAO’
+WHERE ID IN (1,2,3) AND UF = ‘SP’
+
+O comando UPDATE acima, quando submetido para execução, resulta na atualização de:
+As tabelas Projeto, Funcionario e Participacao_Projeto participam da base de dados de um sistema de controle de projetos. A estrutura dessas tabelas é a seguinte:
+
+
+
+O comando SQL que retorna o nome somente dos funcionários que participaram de TODOS os projetos é:
+Em bases de dados multidimensionais, os dados são organizados em cubos de dados. A esse respeito, considere as afirmações a seguir.
+
+I - Os usuários podem consultar os dados segundo qualquer uma das dimensões do cubo de dados.
+
+II - O pivoteamento (ou rotação) é utilizado em cubos de dados para mudar a hierarquia dimensional que está sendo correntemente utilizada por outra.
+
+III - A operação de drill-down refere-se a um movimento no sentido descendente da hierarquia de uma dimensão, desagregando os dados e os apresentando em uma visão mais detalhada.
+
+É correto o que se afirma em
+Um dos esquemas multidimensionais mais comuns é o esquema floco de neve. Nesse esquema,
+Durante o processo de desenvolvimento de um sistema de controle de funcionários, foram identificadas as entidades Funcionario e Dependente, que estão relacionadas como representado no seguinte diagrama entidade-relacionamento (o atributo Matricula é identificador de Funcionario, a entidade Dependente é fraca, e o atributo Sequencial é chave parcial de Dependente).
+
+Durante o mapeamento para o modelo relacional, foram identificadas duas relações: Funcionario e Dependente. A relação funcionário possui dois atributos: Matricula (participante da chave primária) e Nome.
+
+Analisando o diagrama e a definição da relação Funcionario, conclui-se que a relação Dependente possuirá
+Durante a modelagem da base de dados de um sistema de controle de passagens, foram identificadas diversas dependências funcionais. Dentre elas, estão:
+
+(PASSAGEIRO) → (NOME, DATA_NASCIMENTO, TELEFONE*)  (VIAGEM) → (ORIGEM, DESTINO, DATA) Atributos multivalorados: marcados com *
+Além disso, foi identificado que um passageiro poderá participar em várias viagens.
+As tabelas definidas que atendem às dependências funcionais identificadas e ao requisito especificado acima e que estãona Terceira Forma Normal são: 
+Atributos identificadores: sublinhados  Atributos multivalorados: marcados com *
+Considere um banco de dados sobre clientes de uma empresa que realiza vendas pela Internet. CLIENTES, VENDAS e CIDADES são algumas das tabelas desse banco de dados. A estrutura dessas tabelas está representada a seguir, onde os itens sublinhados representam colunas participantes da chave primária, e os itens em negrito representam colunas que participam em chaves estrangeiras.
+
+
+
+A expressão da álgebra relacional que atribui a RES a sigla da UF dos clientes que realizaram compras com Valor_Total superior a 5.000 é
+No padrão ANSI para arquitetura de gerenciadores de bancos de dados, estão presentes três níveis de esquemas: interno, conceitual e externo.
+
+Com a utilização dessa arquitetura, surge o conceito de independência de dados, que consiste na capacidade de
+Pode-se avaliar a modularidade de um sistema de software pelo critério de coesão de seus módulos.
+
+O módulo que contém elementos que contribuem para a execução de uma e somente uma atividade relacionada ao problema constitui um módulo com coesão
+Entre os passos necessários à construção de um modelo dinâmico, inclui-se a
+No método OMT, representar em um sistema os aspectos estáticos, estruturais e de dados é um propósito referente ao modelo
+Um projeto estruturado para desenvolvimento de sistemas é dividido em diversas fases e, entre elas, a que é responsável pelos testes de aceitação de um sistema que, passando por ela, estará pronto para ser implantado e posto em produção.
+
+A partir dessa fase, qualquer modificação que aconteça nesse sistema pertencerá à fase denominada
+O acoplamento de conteúdo acontece quando, entre dois módulos, um referencia o interior do outro. Esses dois módulos podem estar acoplados por mais de uma forma.
+
+Desse modo, o acoplamento desses módulos será definido pela(o)
+A organização de um arquivo com a técnica de alocação encadeada é feita como um conjunto de blocos ligados logicamente no disco, independente da sua localização física.
+
+Nesse tipo de alocação, a fragmentação dos
+Uma das responsabilidades do sistema operacional é usar o hardware com eficiência. Para as unidades de disco magnético, isso significa ter um rápido tempo de acesso e largura de banda de disco. Técnicas de escalonamento de disco podem ser utilizadas para melhorar o tempo de busca, que é o tempo utilizado pelo braço do disco para mover as cabeças para o cilindro que contém o setor desejado.
+
+Qual a técnica de escalonamento na qual o braço do disco percorre continuamente todo o disco, iniciando em uma ponta e indo em direção à outra ponta, atendendo os pedidos ao longo do percurso assim que chega em cada cilindro, e que inverte a direção do percurso de atendimento quando atinge uma das pontas?
+A operação de computadores digitais é baseada no armazenamento e processamento de dados binários. Diversas convenções são usadas para representar números inteiros e positivos. Com relação à representação em complemento de dois, considere as seguintes afirmações:
+
+I - Assim como a representação sinal-magnitude, o bit mais significativo é usado como bit de sinal, mas os demais bits são interpretados de maneira diferente.
+
+II - A faixa de valores representáveis é –2 n-1 a 2 n-1 – 1 e existe apenas uma representação para o número zero.
+
+III - Para converter uma representação em outra com maior número de bits, move-se o bit de sinal para a posição mais à esquerda e preenchem-se as novas posições de bit com valor oposto ao do bit de sinal.
+
+IV - A representação com 8 bits do valor –18 é 11101110, e a do valor +18 é 01101110.
+
+É correto APENAS o que se afirma em
+A normalização é um conjunto de critérios formais para analisar esquemas de relações, com base nas dependências funcionais entre seus atributos. As relações EMPREGADO e PONTO foram apresentadas a um analista de sistemas e reproduzidas abaixo.
+
+
+
+Diante do exposto, conclui-se que
+O princípio da integridade de dados caracteriza-se por condições obrigatórias impostas pelo modelo de banco de dados. Nesse contexto, a restrição de integridade referencial diz que
+Em um projeto de banco de dados distribuído, ficou decidido que as tabelas DEPARTAMENTO, TAXACAMBIO, PRODUTO, VENDEDOR e CLIENTE ficarão espalhadas pelos sites de São Paulo, Espírito Santo e Rio de Janeiro, conforme a ilustração apresentada acima. A tabela CLIENTE, cujas tuplas são mostradas na íntegra, aparece em todos os sites, sendo um exemplo de
+A paginação shadow (sombra) é um esquema de recuperação utilizado em banco de dados que possibilita manter as informações originais alteradas por uma transação que foi cancelada. Esse esquema de recuperação é caracterizado por
+Um órgão público disponibiliza serviços de Internet à população por meio de um cluster de servidores de aplicação JEE. Considerando-se que o mecanismo utilizado para balanceamento de carga é o DNS, analise as afirmativas seguir.
+
+I - É levada em consideração a carga de cada máquina do cluster.
+II - É desnecessária a realização de configurações especiais nas máquinas dos usuários.
+III - É levado em consideração o uso de rede de cada máquina do cluster.
+
+Está correto o que se afirma em
+É característica de um arquivo JSP a
+Se um servidor de aplicação JAVA está com a HEAP configurada com valor abaixo do necessário, é possível que, por esse motivo, ocorram
+Um administrador de sistemas, ao analisar o conteúdo de um arquivo binário, percebeu que o primeiro byte desse arquivo é, em hexadecimal, igual a 9F, que corresponde, em decimal, ao valor
+Convertendo o número hexadecimal AB1 para decimal, temos o valor
+A arquitetura de processadores UMA (Uniform Memory Access), que utiliza um único barramento para comunicação entre os processadores e a memória RAM, tem como principal limitador o(a)
+Ao estudar as especificações e frameworks Java EE, um Analista de Sistemas concluiu que
+Considere as afirmativas a seguir sobre tecnologias de desenvolvimento para aplicações na Internet.
+
+I - Ao contrário da linguagem Java, Javascript é uma linguagem de programação fracamente tipada que pode ser usada em páginas HTML na construção de aplicativos disponibilizados para visualização na Internet.
+II - XML é uma metalinguagem capaz de descrever linguagens de marcação, utilizada também como elemento de integração entre sistemas.
+III - Um exemplo de XML bem formado é:
+
+
+
+Está(ão) correta(s) a(s) afirmativa(s)
+Qual das afirmações a seguir faz uma apreciação correta a respeito da linguagem de programação Java?
+Analise as informações que se seguem, relacionadas aos conceitos de Orientação a Objetos (OO).
+
+I - O conceito de herança possibilita a especialização de comportamentos pré-existentes em classes ancestrais.
+II - Para que um método seja ativado num objeto, uma mensagem não precisa necessariamente ter uma referência explícita a ele, se o objeto default da classe correspondente estiver adequadamente configurado.
+III - Uma das desvantagens da herança é a criação de dependência entre as classes envolvidas.
+IV - De acordo com a ideia do encapsulamento, é desejável, do ponto de vista de um objeto, que seus atributos internos estejam protegidos contra modificações diretas e que o acesso seja realizado por meio de métodos específicos (setters e getters).
+V - Polimorfismo está relacionado à vinculação dinâmica de mensagens e sobrescrita de métodos, sendo que o método correto a ser chamado só será definido em tempo de execução e dependerá do tipo da instância do objeto referenciado pela mensagem.
+
+São corretas APENAS as afirmações
+Ao consultar informações a respeito dos padrões de projeto Adapter e Bridge, um Analista de Sistemas identificou uma afirmativa INCORRETA. Assinale-a.
+O presidente de uma empresa determinou que fosse disponibilizado um sistema de vendas na Internet. No entanto, o software de controle de estoque que deve ser acessado pela aplicação de vendas é muito antigo e provê uma API (Application Programming Interface) de uso muito complicado. Para que os desenvolvedores possam acessar uma interface mais simples, o arquiteto do sistema pode determinar o uso do padrão de projeto
+No âmbito da Refatoração de software, analise as afirmativas a seguir.
+
+I - Introduce Parameter Object é uma técnica de refatoração que pode ser aplicada em métodos muito longos.
+II - Código duplicado é candidato para aplicação das técnicas Extract Method e Substitute Algorithm.
+III - Extract Class é uma técnica de refatoração que pode ser aplicada em classes muito grandes.
+
+Está(ão) correta(s) a(s) afirmativa(s)
+Entity EJB e o statement SQL "SELECT FOR UPDATE" são técnicas para se implementar o padrão arquitetural
+No ciclo de vida em cascata, o custo de correção é menor na fase de
+Considere as informações a seguir, referentes à modelagem de um sistema de informação.
+
+1. Classe Pessoa é generalização das classes Aluno e Professor.
+2. Classe ProfessorMestre é especialização da classe Professor.
+
+Que diagrama de classes UML representa corretamente a situação em questão?
+Sobre o padrão arquitetural Gateway de linha de dados (Row Data Gateway), é INCORRETO afirmar que
+Por motivo de segurança, deseja-se adicionar registro (log) das operações efetuadas no sistema de contabilidade de uma empresa. O arquiteto do sistema decide que deve existir somente uma instância de uma classe de registro (log) e que esta será o ponto de acesso global para os demais componentes do sistema. Que padrão de projeto pode ser utilizado nesse caso?
+Na modelagem de determinado sistema de informação, um objeto remetente X deve ficar bloqueado até que o objeto destinatário Y termine de atender à requisição. Na UML, que tipo de mensagem é indicada para representar a situação descrita?
+A gerência de desenvolvimento de sistemas de uma empresa está reformulando seu processo de software. Para isso, deseja criar uma metodologia de desenvolvimento baseada no Processo Unificado. A respeito desse processo, é INCORRETO afirmar que o(a)
+Observe o fragmento de um diagrama UML relacionado a um sistema de informação hipotético.
+
+
+
+Com base nesse diagrama, considere as afirmativas a seguir.
+
+I - Cliente e Serviço de Aprovação de Crédito são atores de "Fechar Pedido".
+II - O diagrama de colaboração em questão representa, possivelmente, as funcionalidades do sistema.
+III - As elipses indicadas no diagrama representam casos de uso.
+
+Está(ão) correta(s) APENAS a(s) afirmativa(s)
+Na estimativa de um sistema de vendas de livros na Internet, mais de 35% das transações são entradas de dados on-line. De acordo com a Análise de Pontos de Função, que valor deve ser atribuído à característica "Entrada de dados on-line" para o cálculo do nível de influência geral desse sistema?
+Determinado módulo de um sistema financeiro foi estimado em 330 pontos de função não ajustados, utilizando-se a Análise de Pontos de Função. Considerando-se o nível de influência geral igual a 25, qual o total de pontos de função ajustados?
+Determinado projeto de software utiliza XP (eXtreme Programming) como metodologia de desenvolvimento. A esse respeito, é INCORRETO afirmar que
+Observe a árvore binária a seguir.
+
+
+
+No percurso em pré-ordem dessa árvore, o quarto elemento a ser visitado é o
+Seja S uma pilha inicialmente vazia. Primeiramente, o elemento A é inserido em S. Em seguida, o elemento B, e assim por diante, até a inclusão final do elemento E. Ao término dessas operações, qual elemento estará no topo de S?
+Seja n o tamanho da entrada de um algoritmo para um problema P. Cada alternativa, que corresponde a um algoritmo distinto, apresenta o número de operações necessárias para resolver P. Considerando-se a análise assintótica (Big O notation), qual algoritmo possui menor complexidade?
+O principal sistema de informação de uma empresa, desenvolvido internamente, contém regras de negócio no código da interface de usuário. Qual a técnica de refatoração que o arquiteto de software pode indicar para melhorar consideravelmente o sistema nesse caso?
+Se uma máquina possui endereçamento virtual de 48 bits e tamanho de página igual a 4 KB, quantas entradas são necessárias para a tabela de páginas?
+Um disco rígido X gasta 30 segundos para realizar a leitura de Z, que é um arquivo. Se um disco rígido Y tem um desempenho de leitura 50% superior em relação a X, em quantos segundos Y realiza a leitura de Z?
+Sobre bases de dados relacionais, é INCORRETO afirmar que
+Considere as proposições abaixo, a respeito de Bancos de Dados.
+
+I - Uma das técnicas para armazenamento de dados dimensionais é a organização de tabelas, segundo o Esquema Estrela. Em bases de dados, que atendem a esse esquema, podem-se encontrar tabelas que não atendam à Terceira Forma Normal.
+II - Bases de dados de apoio à tomada de decisão armazenam grande quantidade de dados. Por isso, não é recomendável a criação de índices em tais bases de dados.
+III - Em gerenciadores de bancos de dados multidimensionais podem ser encontrados operadores que permitem percorrer hierarquias existentes. Dentre tais operadores estão o de Drill Down e o de Drill Up.
+IV - O procedimento de Extração, Transformação e Carga (também conhecido por ETL) é um dos processos realizados em ambientes de depósitos de dados (data warehouse). Nesse contexto, a Extração se refere à tarefa de retirada de dados do data warehouse (visando a reduzir os dados antigos); a Transformação se refere ao processo de compactação de dados, e a Carga se refere à tarefa de inclusão de novos dados no data warehouse.
+V - Uma das características de bases de dados de apoio à tomada de decisão é a necessidade de armazenarem dados que refletem sempre a situação atual do assunto que representam. Nesse tipo de base de dados, quaisquer informações que não sejam atuais podem ser descartadas, pois não auxiliam em uma boa tomada de decisão.
+
+Estão corretas APENAS as afirmativas
+Considere as seguintes dependências funcionais identificadas durante o processo de modelagem da base de dados de um sistema de controle de biblioteca (atributos multivalorados estão marcados com *).
+
+
+
+Identifique a opção em que as tabelas definidas atendem às dependências funcionais especificadas acima e estão na Terceira Forma Normal (atributos identificadores estão sublinhados e atributos multivalorados estão marcados com *).
+O padrão SQL define diversos níveis de isolamento de transações. Dentre os níveis permitidos, encontra-se o nível de Leitura Confirmada (read committed) que é implementado atualmente por vários Sistemas Gerenciadores de Bancos de Dados (SGBDs). Em um SGBD operando em tal nível de isolamento, tentam-se executar duas transações (T1 e T2). Observe na tabela abaixo o registro do escalonamento previsto para os comandos dessas transações, em que A representa um determinado registro.
+
+
+
+Considerando os dados registrados, conclui-se que
+No âmbito de bancos de dados distribuídos, seja T uma transação distribuída que deve ser efetivada (commited) segundo o protocolo de compromissamento de duas fases (two-phase commit). Sobre esse assunto, assinale a afirmativa INCORRETA.
+Para um melhor desempenho, que valor de FILL FACTOR deve ser utilizado em uma tabela somente para leitura (read-only) no SQL Server 2005?
+Considere as tabelas abaixo "CLIENTE" e "COMPRA", juntamente com a consulta em seguida.
+
+Quantas linhas retorna a consulta acima?
+No âmbito de banco de dados, que grafo de precedência representa um escalonamento que NÃO é serializável quanto ao conflito?
+Assinale a opção em que são apresentadas duas operações fundamentais e unárias da álgebra relacional.
+Observe as afirmativas abaixo sobre o MS SQL SERVER 2005 .
+
+I - É possível gerenciar bancos de dados OLTP e OLAP.
+II - As expressões MDX definem consultas e objetos multidimensionais em bancos de dados OLTP.
+III - O BCP utiliza ODBC (Open Database Connectivity) para comunicação com o SQL Server.
+IV - Pipes nomeados (named pipes) são suportados nativamente.
+V - A tabela sysdatabases encontra-se no banco de dados de sistema chamado MSDB.
+
+Estão corretas, apenas, as afirmativas
+No contexto de engenharia de software, testes de software podem ser decompostos numa série de passos que devem ser executados seqüencialmente. Considerando a arquitetura de software convencional, o primeiro passo deve ser o teste de
+É uma propriedade das árvores balanceadas (árvores B)
+Em relação a métodos de chamada de sub-rotinas, pode-se afirmar que chamadas por
+Seja A uma máquina hipotética com tempo de ciclo de 5 ns e sem paralelismo no nível de instrução. Assumindo-se que cada estágio demora um ciclo de relógio, qual opção indica uma latência e um número de estágios no pipeline de uma máquina hipotética B suficientes para que B tenha uma largura de banda de processador superior ao da máquina A?
+Que API deve ser utilizada em uma aplicação Java EE 5 para leitura e manipulação (parse) de um fluxo (stream) de dados XML, com rapidez e baixo consumo de memória RAM?
+Um servidor Linux, que roda, exclusivamente, um servidor de aplicação Java EE, possui 2 GB de memória RAM e 1 CPU. A única aplicação em execução atinge, em momentos de pico, 50 usuários simultâneos. Para que essa aplicação tenha um desempenho adequado, o tamanho máximo da Heap da JVM pode ser configurado para
+Um sistema de RH fornece uma funcionalidade que pesquisa o histórico do empregado a partir de sua matrícula. Se a matrícula for válida, uma tela é exibida com os seguintes dados:
+
+. Nome completo;
+. Funções exercidas e o período de cada uma delas;
+. Tempo de empresa.
+
+Caso a matrícula não seja válida, uma mensagem de erro é apresentada. Segundo a Análise de Pontos de Função, quantas funções transacionais são contadas para essa tela?
+O sistema de cadastro de eventos de uma empresa de consultoria em TI dispõe de uma tela que lista as palestras gratuitas realizadas no mês, ordenadas por dia, com totalização. No contexto de Análise de Pontos de Função, essa tela do sistema é contada como
+Se a complexidade de tempo de um algoritmo é da ordem de Θ (n log n), é correto afirmar que esse algoritmo também é
+No âmbito de padrões de arquitetura de aplicações corporativas, que padrão permite que objetos sejam carregados na memória somente quando são efetivamente necessários?
+O resultado de 11010101 + 01010010, representado em 8 bits, em complemento a 2, é
+No âmbito de padrões de arquitetura de aplicações corporativas, assinale a opção que NÃO apresenta uma característica do padrão "Table Module".
+Considere uma árvore B de ordem 2 inicialmente vazia.
+Os números abaixo são inseridos na seguinte ordem:
+
+10, 15, 8, 3, 4, 12, 20, 9.
+
+Que número(s) compõe(m) o nó raiz?
+Num departamento com 50 funcionários, cada um gera, em seu próprio computador, 30 requisições por segundo ao sistema de arquivos local, que tem uma capacidade de processamento de 50 requisições por segundo. Se toda essa capacidade de processamento individual fosse colocada em um único servidor, qual o tempo médio para uma requisição ser atendida?
+Seja o seguinte grupo de tabelas de um sistema:
+
+fabricante (idfabricante, nome, endereço)
+peça (idmodelo, nome, descrição)
+constrói (idmodelo (FK), idfabricante (FK), data, quantidade, cor)
+
+Um programador monta a seguinte consulta SQL:
+
+
+Qual o retorno dessa consulta?
+Um analista de sistemas recebe o seguinte trecho de descrição de um sistema:
+
+Uma empresa contrata um profissional para trabalhar em um projeto recebendo um determinado salário. Sabe-se que um projeto pode ter a participação de diversas empresas e que um profissional pode desempenhar várias atividades nesse projeto (p.ex. operador de guindaste e pedreiro). Que modelo ER representa corretamente essa descrição?
+
+(O símbolo (*) representa atributo multivalorado).
+O Administrador de Dados de uma loja virtual verifica que há um problema no sistema controlador do estoque. Alguns produtos apresentam quantidades negativas, ou seja, houve mais vendas que a quantidade existente no estoque.
+O programador do sistema mostra, em pseudocódigo, o trecho que realiza a verificação do estoque. 
+
+Qual opção descreve corretamente o problema e sua solução?
+Um funcionário, encarregado de verificar o correto funcionamento de uma base de dados relacional, faz o seguinte teste:
+
+select nome from emp where matr = 123;
+
+O resultado é vazio. Então ele executa:
+
+insert into emp(matr, nome, salario, ativo)
+values (123, 'José da Silva', 2000, 'N');
+commit;
+
+O banco de dados não retorna erro e informa que inseriu uma linha.
+Por fim, para verificar, ele consulta novamente:
+
+select nome from emp where matr = 123;
+
+O resultado continua vazio.
+
+Supondo que o sistema gerenciador de banco de dados esteja funcionando corretamente, que opção explica o ocorrido?
+Observe o algoritmo em JAVA.
+
+A complexidade de tempo desse algoritmo, no pior caso, em que n corresponde ao número de elementos do vetor v, é
+Um analista de sistemas elabora um texto explicando um sistema de uma imobiliária. Todo departamento deve possuir um e somente um gerente.
+
+Todo empregado deve estar alocado a um e somente um departamento.
+
+O Administrador de Dados elabora os comandos SQL para esse sistema.
+
+
+Sobre as colunas EMPREGADO.IDDEPTO e
+DEPARTAMENTO.MATGERENTE e suas restrições de nulidade
+(NULL ou NOT NULL) e de integridade referencial (chave
+estrangeira), é correto afirmar que
+Observe as seguintes tabelas de um sistema:
+
+Pessoa (nomePessoa, endereço)
+Filme (nomeFilme, estúdio, verba)
+Trabalha (nomePessoa(FK), nomeFilme(FK), atividade, salário)
+
+Um administrador de dados deseja fazer o seguinte relatório: Todas as pessoas, os filmes nos quais já trabalharam e o total recebido por cada filme. Se uma pessoa nunca trabalhou num filme, ela deve aparecer no relatório. A atividade que a pessoa exerceu no filme (ex: ator, diretor, câmera etc.) não é importante para o relatório.
+
+Qual consulta retorna o conjunto resposta correto?
+Duas transações (T1 e T2) de banco de dados executam as seguintes seqüências de operações:
+T1:
+Na tabela DEPARTAMENTO, bloqueia a linha N em modo compartilhado;
+Na tabela DEPARTAMENTO, lê a coluna DESPESA da linha N;
+Na tabela DEPARTAMENTO, desbloqueia a linha N;
+Na tabela PROJETO, bloqueia a linha M em modo compartilhado;
+Na tabela PROJETO, lê a coluna VERBA da linha M;
+Na tabela PROJETO, desbloqueia a linha M;
+Na tabela PROJETO, bloqueia a linha M em modo exclusivo;
+Na tabela PROJETO, escreve a coluna VERBA da linha M com o valor VERBA + DESPESA;
+Na tabela PROJETO, desbloqueia a linha M;
+
+T2:
+Na tabela PROJETO, bloqueia linha M em modo compartilhado;
+Na tabela PROJETO, lê a coluna VERBA da linha M;
+Na tabela PROJETO, desbloqueia a linha M;
+Na tabela DEPARTAMENTO, bloqueia a linha N em modo compartilhado;
+Na tabela DEPARTAMENTO, lê a coluna DESPESA da linha N;
+Na tabela DEPARTAMENTO, desbloqueia a linha N;
+Na tabela DEPARTAMENTO, bloqueia a linha N em modo exclusivo;
+Na tabela DEPARTAMENTO, escreve a coluna DESPESA da linha N com o valor DESPESA + VERBA;
+Na tabela DEPARTAMENTO, desbloqueia a linha N;
+
+É correto afirmar que essas transações
+Observe o seguinte programa JAVA:
+
+package p;
+
+public class exemplo {
+
+public exemplo() {
+
+}
+
+public static void main(String[] args) {
+try {
+      System.out.println(1/0);
+      System.out.println("M");
+     }
+catch (ArithmeticException ex2) { 
+       System.out.print("X");
+     }
+catch (Exception ex3) {
+       System.out.print("Y");
+     }
+finally {
+       System.out.print("Z");
+      }
+System.out.print("F"); 
+   }
+}
+
+A saída desse programa é
+Ao alterar o estado de uma classe, o desenvolvedor deseja que uma ou mais classes da interface gráfica sejam modificadas. Entretanto, o desenvolvedor não acha interessante criar um acoplamento forte entre essas classes. Qual padrão de projeto comportamental é mais adequado para resolver essa situação?
+Suponha que um projeto de software siga o modelo cascata e utilize técnicas de refatoração apoiadas por uma ferramenta durante a etapa de implementação. Qual o impacto resultante na etapa de análise e projeto?
+O diagrama UML mais indicado para representar o passo a passo do fluxo de eventos principal de um caso de uso de um software orientado a objetos é o diagrama de
+Considere o relacionamento de "todo-parte" ilustrado no diagrama UML abaixo.
+
+É correto afirmar que
+Considerando o processo de desenvolvimento de software unificado, associe cada produto de trabalho com a fase em que deve ser realizado.
+
+Marque a opção que ilustra a associação correta.
+No âmbito de estratégias e técnicas de testes de software, assinale a afirmativa correta.
+Que situação favorece a escolha do uso de XP para um projeto de desenvolvimento de software, em oposição à escolha do RUP ou do modelo Cascata?
+Considere uma árvore binária de busca com n elementos e altura mínima. O tempo de acesso a qualquer elemento desta árvore é da ordem de:
+Em seu modelo físico, implementável em um SGBD relacional, quantos campos, no total, participarão das chaves primárias das tabelas se não houver o uso de chaves substitutas (surrogate)?
+Um profundo conhecedor de linguagens de programação deu um parecer sobre um conceito. Qual das afirmações abaixo expressa, corretamente, esse parecer?
+As tabelas abaixo participam de uma base de dados de uma empresa da área financeira (colunas participantes de chavesprimárias estão sublinhadas, e participantes de chaves-estrangeiras, em negrito).
+
+
+
+As tabelas PESSOA, PESSOA_FISICA e PESSOA_JURIDICA armazenam informações sobre indivíduos e empresas que são clientes da instituição. Alguns dos clientes realizam empréstimos. Toda pessoa cadastrada na instituição será sempre cadastrada como pessoa física ou jurídica. A coluna ID_PESSOA, nas tabelas PESSOA_FISICA e PESSOA_JURIDICA, possui chave-estrangeira que referencia a coluna ID_PESSOA da tabela PESSOA. A tabela EMPRESTIMOS apresenta informações sobre empréstimos contraídos por pessoas, incluindo a data do empréstimo e o valor. Deseja-se montar um relatório que apresente informações de todas as pessoas físicas e jurídicas que já contraíram algum empréstimo.
+
+Qual dos comandos SQL abaixo atende às condições desejadas?
+Seja s.sh o seguinte script bash:
+
+
+A chamada "s.sh.f1.f2" produz a saída
+Observe o seguinte programa JAVA:
+
+Supondo eqüidade no escalonamento dos processos e threads, a saída desse programa
+Uma tabela de um banco de dados relacional para um sistema de loja virtual foi definida da seguinte forma:
+
+cliente (idCliente, nome, senha, endereço, tipoEndereço, telefone*)
+onde (*) indica campo multivalorado.
+
+Conhecendo as dependências funcionais:
+
+idCliente -> nome,senha,endereço,tipoEndereço,telefone* tipoEndereço -> endereço
+
+Assinale a opção correta quanto à decomposição da tabela segundo a terceira Forma Normal (3FN).

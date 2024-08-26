@@ -4,15 +4,21 @@ from collections import Counter
 from requests.exceptions import RequestException
 from stem import Signal
 from stem.control import Controller
+import time
 
 # Configuração do proxy para Tor
 PROXY = 'socks5h://127.0.0.1:9050'
+TOR_CONTROL_PORT = 9051
 
 # Função para obter uma nova identidade do Tor
 def renew_tor_identity():
-    with Controller.from_port(port=9051) as controller:
-        controller.authenticate(password='your_control_password')
-        controller.signal(Signal.NEWNYM)
+    try:
+        with Controller.from_port(port=TOR_CONTROL_PORT) as controller:
+            controller.signal(Signal.NEWNYM)
+            time.sleep(10)  # Aguarda o Tor criar um novo circuito
+            print("Identidade do Tor renovada.")
+    except Exception as e:
+        print(f"Erro ao renovar a identidade do Tor: {e}")
 
 # Função para fazer a requisição usando Tor
 def tor_get(url):

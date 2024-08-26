@@ -1,28 +1,29 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
 
-# Configura o Chrome para rodar em modo headless
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
+# Caminho para o Tor Browser
+tor_browser_path = "/home/jf/Downloads/tor-browser/Browser/firefox-bin"
 
-# Inicializa o WebDriver com opções headless
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+# Configura o Firefox para usar o Tor
+firefox_options = Options()
+firefox_options.binary_location = tor_browser_path
+firefox_options.add_argument("--headless")  # Descomente se não quiser que o navegador seja visível
+
+# Inicializa o WebDriver com o Tor Browser
+driver = webdriver.Firefox(service=Service(), options=firefox_options)
 
 def abrir_pagina(url):
     driver.get(url)
-    time.sleep(2)
+    time.sleep(5)  # Espera a página carregar completamente
     
-    # Rolagem para baixo para carregar mais conteúdo, se necessário
+    # Simula a rolagem para garantir que todos os elementos sejam carregados
     body = driver.find_element(By.TAG_NAME, 'body')
     body.send_keys(Keys.END)
-    time.sleep(2)
+    time.sleep(2)  # Espera mais um pouco após rolar
 
     # Extrai todas as questões com a classe 'q-question-enunciation'
     questoes = driver.find_elements(By.CLASS_NAME, "q-question-enunciation")
@@ -37,25 +38,19 @@ todas_questoes = []
 
 # Loop para iterar pelas páginas até coletar 145 questões
 while len(todas_questoes) < 145:
+    # Cria a URL para a página atual
     url = f"{base_url}&page={pagina}"
     print(f"Abrindo página {pagina}...")
     
-    try:
-        questoes = abrir_pagina(url)
-        if not questoes:
-            print(f"Nenhuma questão encontrada na página {pagina}. Interrompendo.")
-            break
-        
-        todas_questoes.extend(questoes)
-        
-        if len(todas_questoes) >= 145:
-            break
-        
-        pagina += 1
-    
-    except Exception as e:
-        print(f"Erro ao processar a página {pagina}: {e}")
+    questoes = abrir_pagina(url)
+    if not questoes:
+        print(f"Nenhuma questão encontrada na página {pagina}. Interrompendo.")
         break
+
+    todas_questoes.extend(questoes)
+
+    # Incrementa o número da página
+    pagina += 1
 
 # Fecha o navegador
 driver.quit()
