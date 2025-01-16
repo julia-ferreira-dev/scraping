@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Caminho para o Tor Browser
-tor_browser_path = "/home/jf/Downloads/tor-browser/Browser/firefox-bin"
+tor_browser_path = "Downloads/tor-browser/Browser/firefox-bin"
 
 # Configura o Firefox para usar o Tor
 firefox_options = Options()
